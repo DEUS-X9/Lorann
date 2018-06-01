@@ -1,4 +1,4 @@
-/*
+/**
  * Mobile class of the Lorann project
  * 
  * @author : Gauthier Parvillers
@@ -22,7 +22,7 @@ public abstract class Mobile extends Element implements IMobile {
 		super(imagePath, permeability);
 		this.pos.setLocation(pos);
 	}
-	/*
+	/**
 	 * Constructor of the Mobile Class
 	 */
 	
@@ -30,19 +30,19 @@ public abstract class Mobile extends Element implements IMobile {
 	public Point getPos() {
 		return pos.location;
 	}
-	/*
+	/**
 	 * method returning the mobile position
 	 * */
 	
 	
 	protected Point pos = new Point();
-	/*
+	/**
 	 * Variable containing the mobile position of the object associated
 	 */
 	
 	
 	protected MobileOrder direction = MobileOrder.Down
-	/*
+	/**
 	 * Variable containing the Direction of the mobile object, initiated at down
 	 */
 	
@@ -97,7 +97,7 @@ public abstract class Mobile extends Element implements IMobile {
 		System.out.println("POS : " + pos);
 	}
 	
-	/*
+	/**
 	 * The move method will transcribe the directional key entered into a "real" movement on the game world
 	 * */
 

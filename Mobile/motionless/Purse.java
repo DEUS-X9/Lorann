@@ -1,4 +1,4 @@
-/*
+/**
  *This class will specificate object from motionless into a bonus item in the game
  *
  * @author : Parvillers Gauthier

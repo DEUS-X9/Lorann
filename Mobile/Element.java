@@ -1,4 +1,4 @@
-/*
+/**
  * Element class of the Lorann project
  * 
  * @author : Gauthier Parvillers
@@ -20,7 +20,7 @@ public abstract class Element implements IElement {
 	
 	public BufferedImage getImage() {
 		return image;
-		/*
+		/**
 		 * 
 		 * This will permit to access the image and use it here
 		 * 
@@ -31,7 +31,7 @@ public abstract class Element implements IElement {
 	public boolean isPermeability() {
 		return permeability;
 		
-		/*
+		/**
 		 * will permit to get the permeability of the "surface"
 		 * true or false
 		 * */

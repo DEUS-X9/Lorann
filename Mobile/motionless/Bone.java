@@ -1,4 +1,5 @@
-/*bone Class, will create specificate object, derivated from the Motionless class
+/**
+ * bone Class, will create specificate object, derivated from the Motionless class
  *  will permit to create all the corner element of the map
  * 
  * @Author : Parvillers Gauthier

@@ -1,4 +1,4 @@
-/*
+/**
  * Monster class class of the Lorann project, will permit to create an enemy
  * 
  * @author : Gauthier Parvillers

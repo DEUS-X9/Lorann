@@ -1,4 +1,4 @@
-/*
+/**
  *This class will specificate object from motionless into a vertical wall in the game
  *
  * @author : Parvillers Gauthier

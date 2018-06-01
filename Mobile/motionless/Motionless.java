@@ -1,4 +1,4 @@
-/*
+/**
  * Motionless class, abstract, will define the common properties of object created in the motionless package
  * depends on the Element Class from Model
  * 

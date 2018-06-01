@@ -1,4 +1,4 @@
-/*
+/**
  *This class will specificate object from motionless into an horizontal wall in the game
  *
  * @author : Parvillers Gauthier

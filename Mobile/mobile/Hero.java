@@ -1,4 +1,4 @@
-/*
+/**
  * Hero class of the Lorann project, will permit to create the character
  * 
  * @author : Gauthier Parvillers
@@ -24,6 +24,10 @@ public class Hero extends Mobile implements IHero {
 	
 	
 	public void move(MobileOrder order, IElement[][] tileMap, IView view) {
+		/**
+		 * This function will permit to move the character around
+		 * 
+		 */
 		
 		switch (order) {
 		
