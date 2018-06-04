@@ -3,9 +3,9 @@ package contract;
 public enum MobileOrder {
 	
 	Right,
-    Up,
-    Left,
-    Down;
+    	Up,
+   	Left,
+    	Down;
 
     public static List<MobileOrder> getValues() {
         return VALUES;
