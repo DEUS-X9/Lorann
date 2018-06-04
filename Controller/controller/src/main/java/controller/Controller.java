@@ -256,30 +256,10 @@ public class Controller implements IController, Observer {
                 this.model.loadMap("MAP5");
                 this.level = 5;
                 break;
-          /*  case MAP6:
-                this.model.loadMap("MAP6");
-                this.level = 6;
-                break;
-            case MAP7:
-                this.model.loadMap("MAP7");
-                this.level = 7;
-                break;
-            case MAP8:
-                this.model.loadMap("MAP8");
-                this.level = 8;
-                break;
-            case MAP9:
-                this.model.loadMap("MAP9");
-                this.level = 9;
-                break;*/
             case MENU:
                 this.model.loadMap("MENU");
                 this.level = 0;
                 break;
-         /*   case WORKSHOP:
-                this.model.loadMap("WORKSHOP");
-                this.level = 1;
-                break;*/
             case MOVEDOWN:
                 this.moveHero(MobileOrder.Down);
                 break;
