@@ -4,8 +4,8 @@ public class IView {
 	
 	/**
 	 * @param controller
-     * Initialize the controller
-     * @author Dorian
+    	 * Initialize the controller
+     	 * @author  pierre fleury
 	 */
 	void setController(IController controller);
 
@@ -33,8 +33,8 @@ public class IView {
 
 	/**
 	 * @param message
-     * POPUP to show a message like a println but not in the console
-     * @author fleury
+         * POPUP to show a message like a println but not in the console
+         * @author  pierre fleury
 	 */
 	void printMessage(final String message);
 
