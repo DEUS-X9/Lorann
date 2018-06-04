@@ -10,13 +10,13 @@ public interface IElement {
 	
 	 /**
      * @return permeability
-     * @author Dorian
+     * @author pierre fleury
      */
     boolean getPermeability();
 
     /**
      * @return image
-     * @author Dorian
+     * @author pierre fleury
      */
     BufferedImage getImage();
 
