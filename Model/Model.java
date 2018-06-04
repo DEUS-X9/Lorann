@@ -1,10 +1,3 @@
-/**
- * Model class, will permit to instantiate the map
- * 
- * @author Gauthier Parvillers
- * v1.2
- */
-
 package model;
 
 import java.awt.*;
@@ -16,137 +9,132 @@ import contract.IElement;
 import contract.IModel;
 import model.mobile.*;
 import model.motionless.*;
-import model.dao.*;
 
+/**
+ * The Class Model.
+ */
 public class Model extends Observable implements IModel {
-	
-	private String map = "";
-			/**the map will be stocked here*/
-			
-	private int score = 0;
-	/**creation of the score*/
-	
-	/**instantiation of a new model*/
-	public Model() {
-		
-		
-	}
-		
-		/**association of letter with a sprite*/
-		
-		public IElement element(char c, Point pos) {
-			switch (c) {
-			
-			case '' :
-				return new Bone();
-				
-			case '' :
-				return new HorizontalBone();
-				
-			case '' :
-				return new VerticalBone();
-				
-			case '' :
-				return new EnergyBubble();
-				
-			case '' :
-				return new ClosedDoor();
-				
-			case '' :
-				return new Purse();
-				
-			case '' :
-				return new Hero(pos);
-				
-			case '' :
-				return new Sorcery(pos);
-				
-			case '' :
-				return new Monster1(pos);
-				
-			case '' :
-				return new Monster2(pos);
-				
-			case '' :
-				return new Monster3(pos);
-				
-			case '' :
-				return new Monster4(pos);
-			
-			case '' :
-				return new Score();
-				
-			case '' :
-				return new Title();
-				
-			case '' :
-				return empty();
-			}
-			
-			public Observable getObservable() {
-				return this.map;
-			}
-			
-			public String getMap() {
-				return this.map;
-				/**
-				 * get the map and @return it
-				 */
-			}
-			
-			private void setMap(final String map) {
-				this.map = map;
-				this.setChanged();
-				this.notifyObservers();
-				/**Sets the map
-				 * @param map contains the String of the map
-				 */
-			}
-			
-			public void loadMap(String key) {
-				try {
-					final DAOLoadMap daoLoadMap = new DAOLoadMap(LorannBDDConnector.getInstance().getConnection());
-					this.setMap(daoLoadMap.find(key).getMap());
-				} catch (final SQLException e) {
-					e.printStackTrace();
-				}}
-				
-				
-				/** upload of the score to the database
-				 * @param score contains the score
-				 * @nickname contains the nickname of the player
-				 */
-				
-				public void  upNameAndScore(int score, String nickname) {
-					try
-					
-					{
-						 final DAOUploadScore daoUploadScore = new DAOUploadScore(LorannBDDConnector.getInstance().getConnection());
-						 daoUploadScore.upNameAndScore(score,nickname);
-					}
-					
-					catch (final SQLException e)
-					{
-						e.printStackTrace();
-					}
-				}
-				
-				
-				
-				public String[][] getHighSore()
-				{
-					try {
-						final DAOGetHighscore daoGetHighscore = new DAOGetHighscore(LorannBDDConnector.getInstance().getConnection());
-						return (daoGetHighscore.getHighScore());
-					}
-					catch (final SQLException e)
-					{
-						e.printStackTrace();
-					}
-					return null;
-				}
-			}
-			
 
-			
+	/** The map */
+	private String map = "";
+
+	/** The score */
+	private int score = 0;
+
+	/**
+	 * Instantiates a new model.
+	 */
+	public Model() {
+	}
+
+	/**
+	 * Associate all sprite with a letter representing hin in tileMap
+	 */
+	public IElement element(char c, Point pos) {
+		switch (c){
+			case 'B':
+				return new Bone();
+			case 'K':
+				return new CrystalBall();
+			case 'H':
+				return new HorizontalBone();
+			case 'V':
+				return new VerticalBone();
+			case 'C':
+				return new ClosedDoor();
+			case 'O':
+				return new OpenDoor();
+			case 'P':
+				return new Purse();
+			case 'L':
+				return new Hero(pos);
+            case 'F':
+                return new Sorcery(pos);
+			case '1':
+				return new Monster1(pos);
+			case '2':
+				return new Monster2(pos);
+			case '3':
+				return new Monster3(pos);
+			case '4':
+				return new Monster4(pos);
+			case 'T':
+				return new Title();
+			case 'S':
+				return new Score();
+			default:
+				return new Empty();
+		}
+	}
+
+	/**
+	 *
+	 *
+	 * @see contract.IModel#getObservable()
+	 */
+	public Observable getObservable() {
+		return this;
+	}
+
+	/** Gets the map
+	 * @return the map
+	 */
+	public String getMap() {
+		return this.map;
+	}
+
+	/** Sets the map
+	 * @param map contains a string which is the map
+	 */
+	private void setMap(final String map) {
+		this.map = map;
+		this.setChanged();
+		this.notifyObservers();
+	}
+
+
+	/** Loads the map from the SQL db
+	 * @param key contains the key that is linked to the map
+	 */
+	public void loadMap(String key) {
+		try {
+			final DAOLoadMap daoLoadMap = new DAOLoadMap(LorannBDDConnector.getInstance().getConnection());
+			this.setMap(daoLoadMap.find(key).getMap());
+		} catch (final SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/** Uploads the nickname and score to the db
+	 * @param score contains the score
+	 * @param nickname contains the nickname
+	 */
+	public void upNameAndScore(final int score, final String nickname)
+	{
+		try
+		{
+			final DAOUploadScore daoUploadScore = new DAOUploadScore(LorannBDDConnector.getInstance().getConnection());
+			daoUploadScore.upNameAndScore(score, nickname);
+		}
+		catch (final SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+	/** Downloads the highscores from the db
+	 * @return an array containing the nicknames and the scores
+	 */
+	public String[][] getHighScore()
+	{
+		try {
+			final DAOGetHighscore daoGetHighscore = new DAOGetHighscore(LorannBDDConnector.getInstance().getConnection());
+			return (daoGetHighscore.getHighScore());
+		}
+		catch (final SQLException e)
+		{
+			e.printStackTrace();
+		}
+		return null;
+	}
 }
