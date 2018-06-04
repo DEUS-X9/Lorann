@@ -17,8 +17,7 @@ public enum ControllerOrder {
 	MAP3,
 	MAP4,
 	MAP5,
-	TEST,
 	MENU,
-    FIRE
+    	FIRE
 
 }
