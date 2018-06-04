@@ -9,35 +9,62 @@ import javax.swing.JPanel;
 
 import contract.IElement;
 
+/**
+ * The ViewPanel class
+ * @author Méline AMBROSINI
+ * @version v.4
+ */
+
 class ViewPanel extends JPanel {
 	
+	/** the view frame*/
 	private ViewFrame viewFrame;
+	
 	
     private IElement[][] tileMap;
 
-	
+	/**
+	 * constructor of the ViewPanel Class
+	 * instantiates a new view panel
+	 * 
+	 * @param viewFrame
+	 * 	the view frame
+	 */
 	public ViewPanel(final ViewFrame viewFrame) {
 		this.setViewFrame(viewFrame);
 	}
 
-
+	/** 
+	 * Getter of the ViewFrame
+	 * @return the viewFrame
+	 */
 	private ViewFrame getViewFrame() {
 		return this.viewFrame;
 	}
 
-
+	/**
+	 * Setter of the viewFrame
+	 * 
+	 */
 	private void setViewFrame(final ViewFrame viewFrame) {
 		this.viewFrame = viewFrame;
 	}
 
-
+	/**
+	 * setup tileMap in view panel
+	 * @param tileMap
+	 */
     public void update(IElement[][] tileMap) {
         this.tileMap = tileMap;
 		this.setSize(this.tileMap[0].length, this.tileMap.length);
 		this.repaint();
 	}
     
-	
+	/** 
+	 * print on screen sprites of the game
+	 * refresh the user's score using tileMap
+	 * 
+	 */
 	protected void paintComponent(final Graphics graphics) {
         graphics.setColor(Color.black);
         graphics.fillRect(0, 0, this.getWidth(), this.getHeight());
