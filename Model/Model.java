@@ -1,5 +1,8 @@
 /**
  * Model class, will permit to instantiate the map
+ * 
+ * @author Gauthier Parvillers
+ * v1.2
  */
 
 package model;
@@ -13,6 +16,7 @@ import contract.IElement;
 import contract.IModel;
 import model.mobile.*;
 import model.motionless.*;
+import model.dao.*;
 
 public class Model extends Observable implements IModel {
 	
@@ -93,7 +97,7 @@ public class Model extends Observable implements IModel {
 			private void setMap(final String map) {
 				this.map = map;
 				this.setChanged();
-				this.notifyObserver();
+				this.notifyObservers();
 				/**Sets the map
 				 * @param map contains the String of the map
 				 */
@@ -132,10 +136,10 @@ public class Model extends Observable implements IModel {
 				public String[][] getHighSore()
 				{
 					try {
-						final DAOGetHighScore daoGetHighscore = new DAOGetHighscore(LorannBDDConnector.getInstance().getConnection());
-						return (daoGetHighScore.getHighScore());
+						final DAOGetHighscore daoGetHighscore = new DAOGetHighscore(LorannBDDConnector.getInstance().getConnection());
+						return (daoGetHighscore.getHighScore());
 					}
-					catch (final SQLEception e)
+					catch (final SQLException e)
 					{
 						e.printStackTrace();
 					}
@@ -143,11 +147,6 @@ public class Model extends Observable implements IModel {
 				}
 			}
 			
-			
-			
-			
-		}
-		
-	}
+
 			
 }

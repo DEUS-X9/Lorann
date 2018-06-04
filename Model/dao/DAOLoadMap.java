@@ -13,7 +13,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-class DAOLoadMap extends DAOEntity<LoadMap> {
+public class DAOLoadMap extends DAOEntity<LoadMap> {
 	
 	/**
 	 * Instantiation of a new DAO Load Map

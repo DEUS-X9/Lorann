@@ -8,13 +8,14 @@
 
 package model.mobile;
 
+import model.Element;
+
+import java.awt.*;
+
 import contract.IElement;
 import contract.IHero;
 import contract.IView;
 import contract.MobileOrder;
-import model.Element;
-
-import java.awt.*;
 
 public class Hero extends Mobile implements IHero {
 	
