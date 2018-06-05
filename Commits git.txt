@@ -1,0 +1,112 @@
+Méline AMBROSINI
+
+Javadoc view package
+ 
+View class v.5
+
+View v.4
+
+View v.3
+
+View v.2
+
+Revert "Revert "View v.1""
+
+Revert "View v.1"
+
+View v.1
+
+
+Alexi AL KHOURI
+
+test
+
+space for test
+
+Javadocs 2.0
+
+Auto stash before merge of "master" and "origin/master"
+
+Update ControllerTest.java
+
+Update Controller.java
+
+Update Hero.java
+
+Merge pull request #5 from DEUS-X9/main 
+
+Merge pull request #2 from DEUS-X9/Controller
+
+Merge pull request #3 from DEUS-X9/Model
+
+Merge pull request #4 from DEUS-X9/Contract
+
+Merge pull request #1 from DEUS-X9/View
+
+Controller
+
+add of model.java
+
+Initial commit 
+
+
+Pierre FLEURY
+
+Import test
+
+Update IView.java
+
+Update IModel.java
+
+Update IElement.java
+
+Update MobileOrder.java
+
+Update IMonster.java
+
+Update IFireball.java
+
+Update IHero.java
+
+Update IMobile.java
+
+Update IController.java
+
+Update IModel.java
+
+Revert "Contents of the controller package" 
+
+Update ControllerOrder.java
+
+Update MobileOrder.java
+
+Update IView.java
+
+Update IElement.java
+
+contents of the contract class
+
+Contents of the controller package
+
+Contents of the main class
+
+
+Gauthier PARVILLERS
+
+JAVADOC
+
+maj des class de model
+
+aojut de la partie Entity Data Access Object
+
+original dao + class model v1.2
+
+up des comm
+
+added the v1.0 of the mobile object class 
+
+add v1.0 of element
+
+Package motionless v1.0
+
+
