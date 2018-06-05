@@ -3,17 +3,11 @@ package contract;
 import java.awt.Point;
 
 public interface IController {
-	/**
-	 * The Interface IController.
-	 *
-	 * 
-	 */
-	public interface IController {
-
 		/**
-		 * Start the main gameloop.
-	     * @author pierre fleury
-		 */
+	 	* The Interface IController.
+	 	*
+	 	* 
+		*/
 		void start();
 
 		/**
@@ -25,13 +19,13 @@ public interface IController {
 
 		/**
 		 * @return tileMap
-	     * @author pierre fleury
+	     	 * @author pierre fleury
 		 */
 		IElement[][] getTileMap();
 
 		/**
 		 * @return Score
-	     * @author pierre fleury
+	         * @author pierre fleury
 		 */
 		int getScore();
 
@@ -43,9 +37,9 @@ public interface IController {
 	    Point computeNextPos(MobileOrder direction, Point currentPos);
 
 		/**
-	     * Get the level according to the number of the map played for the draw string at the bottom of the window
+	     	 * Get the level according to the number of the map played for the draw string at the bottom of the window
 		 * @return Level
-	     * @author pierre fleury
+	    	 * @author pierre fleury
 		 */
 		int getLevel();
 
