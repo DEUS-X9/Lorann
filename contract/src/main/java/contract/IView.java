@@ -11,7 +11,6 @@ public class IView {
 
     /**
      * In the loop, refresh the view for animation, movement, and update made on the map
-     * @author pierre fleury
      */
     void repaint();
 
@@ -27,14 +26,12 @@ public class IView {
 
     /**
      * @return pseudo
-     * @author pierre fleury
      */
     String getPseudo();
 
 	/**
 	 * @param message
          * POPUP to show a message like a println but not in the console
-         * @author  pierre fleury
 	 */
 	void printMessage(final String message);
 
