@@ -67,10 +67,10 @@ public class View implements IView, Runnable {
 				return ControllerOrder.MAP3;
 			case KeyEvent.VK_NUMPAD4:
 				return ControllerOrder.MAP4;
-            case KeyEvent.VK_NUMPAD5:
-                return ControllerOrder.MAP5;			
-            case KeyEvent.VK_M:
-                return ControllerOrder.MENU;            
+            		case KeyEvent.VK_NUMPAD5:
+            			return ControllerOrder.MAP5;			
+            		case KeyEvent.VK_M:
+                		return ControllerOrder.MENU;            
 			case KeyEvent.VK_LEFT:
 				return ControllerOrder.MOVELEFT;
 			case KeyEvent.VK_RIGHT:
@@ -79,10 +79,11 @@ public class View implements IView, Runnable {
 				return ControllerOrder.MOVEDOWN;
 			case KeyEvent.VK_UP:
 				return ControllerOrder.MOVEUP;
-            case KeyEvent.VK_SPACE:
-                return ControllerOrder.FIRE;
-            case KeyEvent.VK_ESCAPE:
-            	return ControllerOrder.ESCAPE;
+            		case KeyEvent.VK_SPACE:
+                		return ControllerOrder.FIRE;
+            		case KeyEvent.VK_ESCAPE:
+            			return ControllerOrder.ESCAPE;
+			
 			default:
 				return null;
 		}
