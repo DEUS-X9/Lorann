@@ -2,8 +2,6 @@ package model;
 
 /**
  * The Class GetHighScore.
- *
- * @author Quentin Strinati
  */
 class GetHighscore extends EntityScore {
     /**

@@ -8,7 +8,6 @@ import java.sql.SQLException;
 /**
  * The Class DAOLoadMap.
  *
- * @author Quentin Strinati
  */
 class DAOUploadScore extends DAOEntityScore<UploadScore> {
 

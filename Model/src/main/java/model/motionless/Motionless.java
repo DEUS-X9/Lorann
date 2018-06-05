@@ -2,9 +2,6 @@ package model.motionless;
 
 import model.Element;
 
-/**
- * Created by Quentin Strinati on 14/06/2016.
- */
 
 /** Class used to create a motionless element */
 public abstract class Motionless extends Element {

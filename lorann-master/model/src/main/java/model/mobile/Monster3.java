@@ -6,9 +6,6 @@ import contract.MobileOrder;
 
 import java.awt.Point;
 
-/**
- * Created by Quentin Strinati on 14/06/2016.
- */
 
 /** Class used to create the monster 3 */
 public class Monster3 extends Mobile implements IMonster {

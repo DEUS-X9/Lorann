@@ -1,6 +1,5 @@
 package model.motionless;
 
-/** Created by Romain Muller */
 
 /** Class used to create an empty case on the tile map */
 public class Empty extends Motionless {

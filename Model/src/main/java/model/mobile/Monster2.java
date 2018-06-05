@@ -5,9 +5,6 @@ import contract.*;
 import java.awt.*;
 import java.util.ArrayList;
 
-/**
- * Created by Quentin Strinati on 14/06/2016.
- */
 
 /** Class used to create the monster 2 */
 public class Monster2 extends Mobile implements IMonster {

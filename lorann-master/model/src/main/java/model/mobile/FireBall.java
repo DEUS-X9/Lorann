@@ -6,9 +6,6 @@ import model.Element;
 
 import java.awt.*;
 
-/**
- * Created by Quentin Strinati on 14/06/2016.
- */
 
 
 /** Class that is used to build a fireball which will be the weapon for our hero */

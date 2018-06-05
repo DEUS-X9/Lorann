@@ -6,8 +6,6 @@ import java.sql.SQLException;
 /**
  * The Class DAOEntityScore.
  *
- * @author Quentin Strinati
- *
  * @param <E>
  *          the element type
  */

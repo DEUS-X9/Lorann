@@ -4,9 +4,6 @@ import contract.*;
 
 import java.awt.*;
 
-/**
- * Created by Quentin Strinati on 14/06/2016.
- */
 
 /** Class used to create the monster 4 */
 public class Monster4 extends Mobile implements IMonster {

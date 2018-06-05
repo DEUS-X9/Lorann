@@ -11,9 +11,6 @@ import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created by Quentin Strinati on 13/06/2016.
- */
 
 /** Class used to create the Mobile class, extending from Element and implementing IMobile */
 public abstract class Mobile extends Element implements IMobile {

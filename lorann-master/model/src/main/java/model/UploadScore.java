@@ -1,8 +1,5 @@
 package model;
 
-/**
- * Created by Quentin Strinati on 16/06/2016.
- */
 
 /** Class used to create an UploadScore object that extends from EntityScore */
 public class UploadScore extends EntityScore {
