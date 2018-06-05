@@ -1,16 +1,13 @@
 package main;
 
-import java.sql.SQLException;
-
-import controller.ControllerFacade;
-import model.ModelFacade;
-import view.ViewFacade;
+import controller.Controller;
+import model.Model;
+import view.View;
 
 /**
- * <h1>The Class Main.</h1>
+ * The Class Main.
  *
- * @author Jean-Aymeric DIET jadiet@cesi.fr
- * @version 1.0
+ * @author Jean-Aymeric Diet
  */
 public abstract class Main {
 
@@ -23,9 +20,8 @@ public abstract class Main {
 	public static void main(final String[] args) {
 		final Model			model = new Model();
 		final View			view = new View(model);
-		final Controller	controller = new ControllerFacade(view, model);
+		final Controller	controller = new Controller(view, model);
 		view.setController(controller);
 		controller.start();
 	}
-
 }
