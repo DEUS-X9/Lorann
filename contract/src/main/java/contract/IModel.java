@@ -26,7 +26,7 @@ public interface IModel {
 	void loadMap(String key);
 
 	/**
-	 * @param c c for character on the text file
+	 * @param c for character on the text file
 	 * @param pos
 	 * Use the parser to locate, on the map, the position for the mobile elements, and the door, in order to make them move when needed
 	 * @return map
