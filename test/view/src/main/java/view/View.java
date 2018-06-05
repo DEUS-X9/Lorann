@@ -67,20 +67,8 @@ public class View implements IView, Runnable {
 				return ControllerOrder.MAP4;
             case KeyEvent.VK_NUMPAD5:
                 return ControllerOrder.MAP5;
-			/*case KeyEvent.VK_NUMPAD6:
-				return ControllerOrder.MAP6;
-			case KeyEvent.VK_NUMPAD7:
-				return ControllerOrder.MAP7;
-			case KeyEvent.VK_NUMPAD8:
-				return ControllerOrder.MAP8;
-			case KeyEvent.VK_NUMPAD9:
-				return ControllerOrder.MAP9;
-			case KeyEvent.VK_NUMPAD0:
-				return ControllerOrder.TEST;*/
             case KeyEvent.VK_M:
                 return ControllerOrder.MENU;
-          /*  case KeyEvent.VK_W:
-                return ControllerOrder.WORKSHOP;*/
 			case KeyEvent.VK_LEFT:
 				return ControllerOrder.MOVELEFT;
 			case KeyEvent.VK_RIGHT:

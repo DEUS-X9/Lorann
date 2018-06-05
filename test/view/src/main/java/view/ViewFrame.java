@@ -131,7 +131,6 @@ class ViewFrame extends JFrame implements KeyListener {
 		this.viewPanel = new ViewPanel(this);
 		this.setTitle("Lorann");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setIconImage(new ImageIcon("/view/src/main/resources/sprite/lorann_l.png").getImage());
 		this.setResizable(false);
 		this.addKeyListener(this);
 		this.setContentPane(this.viewPanel);

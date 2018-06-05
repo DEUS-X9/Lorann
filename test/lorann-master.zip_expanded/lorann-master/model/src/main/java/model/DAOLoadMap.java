@@ -8,7 +8,6 @@ import java.sql.SQLException;
 /**
  * The Class DAOLoadMap.
  *
- * @author Cyril SNIADACH
  */
 class DAOLoadMap extends DAOEntity<LoadMap> {
 

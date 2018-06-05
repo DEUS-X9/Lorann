@@ -22,14 +22,12 @@ public interface IModel {
 	 * Gets the map content.
 	 * Load the text file of the map needed as it appear in the DataBase
 	 * @return the content
-     * @author Dorian
 	 */
 	String getMap();
 
 	/**
 	 * Load the map using the key in the table map of the database
 	 * @param key Id in the DB
-	 * @author Dorian
 	 */
 	void loadMap(String key);
 
@@ -44,7 +42,6 @@ public interface IModel {
     /**
      * Get the Highscore from the DB made by the five best users. Use a SQL routine
      * @return an array, in the first column the nickname, and the second the highscore
-     * @author Dorian
      */
     String[][] getHighScore();
 
@@ -52,7 +49,6 @@ public interface IModel {
      * @param score int made by user
      * @param nickname string typed
      * At win or loose POPUP the actual score made is load in the DataBase
-     * @author Dorian
      */
     void upNameAndScore(final int score, final String nickname);
 }

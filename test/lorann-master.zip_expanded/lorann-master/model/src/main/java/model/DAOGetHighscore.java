@@ -6,7 +6,6 @@ import java.util.ArrayList;
 /**
  * The Class DAOGetHighScore.
  *
- * @author Quentin Strinati
  */
 class DAOGetHighscore extends DAOEntityScore<GetHighscore> {
 

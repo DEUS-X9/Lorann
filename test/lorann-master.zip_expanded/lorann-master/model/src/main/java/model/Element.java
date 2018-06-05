@@ -8,9 +8,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
-/**
- * Created by Yog on 13/06/2016.
- */
 public abstract class Element implements IElement {
     protected BufferedImage image = null;
     protected boolean permeability;

@@ -6,9 +6,6 @@ import contract.MobileOrder;
 
 import java.awt.*;
 
-/**
- * Created by Quentin Strinati on 14/06/2016.
- */
 
 /** Class that is used to create the monster 1 */
 public class Monster1 extends Mobile implements IMonster {
