@@ -11,28 +11,29 @@ import contract.IView;
 
 /**
  * The View class
- * @author MÃ©line AMBROSINI
+ * @author Méline AMBROSINI
  *@version v.4
  */
 
 public class View implements IView, Runnable {
 
-	/** The frame */
-	private ViewFrame viewFrame;
+	/** The frame. */
+	private final ViewFrame viewFrame;
 
-	/** 
+	/**
 	 * constructor of the View class
-	 * Instantiates a new view
-	 * 
+	 * Instantiates a new view.
+	 *
 	 * @param model
-	 * 			the model
+	 *          the model
 	 */
 	public View(final IModel model) {
 		this.viewFrame = new ViewFrame(model);
 		SwingUtilities.invokeLater(this);
 	}
 
-	/**	 
+	/**
+	 * height's getter
 	 * @return height of the window
 	 */
 	public int getHeight()
@@ -41,6 +42,7 @@ public class View implements IView, Runnable {
 	}
 
 	/**
+	 * width's getter
 	 * @return width of the window
 	 */
 	public int getWidth()
@@ -48,12 +50,13 @@ public class View implements IView, Runnable {
 		return this.viewFrame.getWidth();
 	}
 
-   /**Management of the users' actions
-    * 
-    * @param keyCode
-    * 	the key code
-    * @return the controller order
-    */
+    /**
+	 * Management of the user's actions
+	 *
+	 * @param keyCode
+	 *          the key code
+	 * @return the controller order
+	 */
 	protected static ControllerOrder keyCodeToControllerOrder(final int keyCode) {
 		switch (keyCode) {
 			case KeyEvent.VK_NUMPAD1:
@@ -84,11 +87,16 @@ public class View implements IView, Runnable {
 				return null;
 		}
 	}
-	
+
 	/**
-	 * Get the user's pseudo
-	 * @ return User's pseudo
+	 * Print a message via a frame
+	 * @param message
+	 * 	a message 
+	 * 
 	 */
+	public void printMessage(final String message) {
+		this.viewFrame.printMessage(message);
+	}
 
 	public String getPseudo() {
 		return this.viewFrame.pseudo();
@@ -96,33 +104,28 @@ public class View implements IView, Runnable {
 
 	/**
 	 * Launch the application
+	 *	 
 	 */
 	public void run() {
 		this.viewFrame.setVisible(true);
 	}
 
 	/**
-	 * update informations and refresh
+	 * Update information and refresh
+	 *	 
 	 */
 	public void repaint(){
 		this.viewFrame.update();
 	}
 
 	/**
-	 * Set the controller
+	 * controller's setter
+	 *
 	 * @param controller
-	 * 	the controller
+	 *          the controller	 *
+	 
 	 */
 	public void setController(final IController controller) {
 		this.viewFrame.setController(controller);
-	}
-
-/**
- * Print a message
- * @param message
- * 	a message
- */
-	public void printMessage(String message) {
-		this.viewFrame.printMessage(message);	
 	}
 }

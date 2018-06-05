@@ -11,60 +11,78 @@ import contract.IElement;
 
 /**
  * The ViewPanel class
- * @author MÃ©line AMBROSINI
+ * @author Méline AMBROSINI
  * @version v.4
  */
 
-class ViewPanel extends JPanel {
-	
-	/** the view frame*/
+public class ViewPanel extends JPanel {
+
+	/** The view frame. */
 	private ViewFrame viewFrame;
-	
-	
+	/** The Constant serialVersionUID. */
+	private static final long serialVersionUID = -998294702363713521L;
+
     private IElement[][] tileMap;
 
 	/**
-	 * constructor of the ViewPanel Class
-	 * instantiates a new view panel
-	 * 
+	 * constructor of the ViewPanel class
+	 * Instantiates a new view panel.
+	 *
 	 * @param viewFrame
-	 * 	the view frame
+	 *          the view frame
 	 */
 	public ViewPanel(final ViewFrame viewFrame) {
 		this.setViewFrame(viewFrame);
 	}
 
-	/** 
-	 * Getter of the ViewFrame
-	 * @return the viewFrame
+	/**
+	 * Gets the view frame.
+	 *
+	 * @return the view frame
 	 */
 	private ViewFrame getViewFrame() {
 		return this.viewFrame;
 	}
 
 	/**
-	 * Setter of the viewFrame
-	 * 
+	 * Sets the view frame.
+	 *
+	 * @param viewFrame
+	 *          the new view frame
 	 */
 	private void setViewFrame(final ViewFrame viewFrame) {
 		this.viewFrame = viewFrame;
 	}
 
-	/**
-	 * setup tileMap in view panel
-	 * @param tileMap
-	 */
+    /**
+     * Setup tileMap in ViewPanel
+     * @param tileMap
+     *
+     */
     public void update(IElement[][] tileMap) {
         this.tileMap = tileMap;
 		this.setSize(this.tileMap[0].length, this.tileMap.length);
 		this.repaint();
 	}
-    
-	/** 
+
+    /**
+     * Modified windows size taking border in count and sprite size (32x32)
+     *
+     * @param width
+     * @param height
+     */
+    public void setSize(int width, int height) {
+        super.setSize((width*32) + this.getInsets().left + this.getInsets().right,
+                (height*32) + this.getInsets().top + this.getInsets().bottom + 40);
+        this.viewFrame.setSize(width*32, height*32 + 40);
+    }
+
+	/**
 	 * print on screen sprites of the game
-	 * refresh the user's score using tileMap
+	 *refresh the user's score using tileMap
 	 * 
 	 */
+	@Override
 	protected void paintComponent(final Graphics graphics) {
         graphics.setColor(Color.black);
         graphics.fillRect(0, 0, this.getWidth(), this.getHeight());

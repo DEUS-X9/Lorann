@@ -1,13 +1,15 @@
 package view;
 
-import model.Model;
+
 import org.junit.Test;
+
+import contract.IModel;
 
 import static org.junit.Assert.*;
 
 public class ViewTest {
     @Test
     public void TestView() {
-        View view = new View(new Model());
+        View view = new View(null);
     }
 }

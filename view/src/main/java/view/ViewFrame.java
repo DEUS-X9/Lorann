@@ -11,23 +11,26 @@ import contract.IModel;
 
 /**
  * The ViewFrame class
- * @author MÃ©line AMBROSINI
+ * @author Méline AMBROSINI
  *@version v.4
  */
 
-class ViewFrame extends JFrame implements KeyListener {
+public class ViewFrame extends JFrame implements KeyListener {
 
-	/** The constant serialVersionUID */		
-	private static final long serialVersionUID = 1L;
+	/**
+	 * the serialVersionUID
+	 */
+	private static final long serialVersionUID = -7431742421957875716L;
 
-	/**The controller*/
+	/** The controller. */
 	private IController controller;
 
-	/** the view panel*/
-	private ViewPanel viewPanel;
+	/** The view panel*/
+	private ViewPanel viewPanel;	
 	
 	/**
-	 * getter of the controller class
+	 * Controller class's getter
+	 *
 	 * @return the controller
 	 */
 	public IController getController() {
@@ -35,14 +38,16 @@ class ViewFrame extends JFrame implements KeyListener {
 	}
 
 	/**
-	 * setter of the controller
+	 * Controller class's setter
+	 *
 	 * @param controller
-	 * 	the controller
+	 *          the new controller
 	 */
 	protected void setController(final IController controller) {
 		this.controller = controller;		
 	}
-	
+
+
 	/**
 	 * constructor of this class
 	 * instantiates a new view frame
@@ -62,12 +67,35 @@ class ViewFrame extends JFrame implements KeyListener {
 	}
 
 	/**
-	 * update tileMap information
+	 * Update tileMap informations
 	 */
 	public void update() {
 		this.viewPanel.update(
-        this.controller.getTileMap());       
-	}    
+                this.controller.getTileMap()
+        );
+	}
+	
+	/**
+     * Modified windows size taking border in count
+     *
+     * @param width
+     * @param height
+     */
+    public void setSize(int width, int height) {
+        super.setSize(width + this.getInsets().left + this.getInsets().right,
+                height + this.getInsets().top + this.getInsets().bottom);
+    }
+    
+
+	/**
+	 * Print a message.
+	 *
+	 * @param message
+	 *          the message
+	 */
+	public void printMessage(final String message) {
+		JOptionPane.showMessageDialog(null, message);
+	}
 
 	/**
 	 * method used to capture the user's action
@@ -78,6 +106,7 @@ class ViewFrame extends JFrame implements KeyListener {
 
 	/**
 	 * method used to capture the user's actions and send them to the controller
+	 *
 	 */
 	public void keyPressed(final KeyEvent e) {
 		this.getController().orderPerform(View.keyCodeToControllerOrder(e.getKeyCode()));
@@ -91,19 +120,10 @@ class ViewFrame extends JFrame implements KeyListener {
 	}
 
 	/**
-	 * get the user's pseudo
-	 * @return a panel in which the user can enter his pseudo
+	 * Get the user's pseudo
+	 * @return user pseudo
 	 */
 	public String pseudo() {
 		return JOptionPane.showInputDialog("Pseudo");
-	}
-	
-	/**
-	 * print a message
-	 * @param message
-	 * 	a message
-	 */
-	public void printMessage(String message) {
-		JOptionPane.showMessageDialog(null, message);
 	}
 }
