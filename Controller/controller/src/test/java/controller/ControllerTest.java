@@ -130,80 +130,7 @@ public class ControllerTest {
                 this.model.getMap());
     }
 
-  /*  @Test
-    public void TestOrderPerformMAP6() throws Exception {
-        this.controller.orderPerform(ControllerOrder.MAP6);
-        assertEquals(6, this.controller.getLevel());
-        assertEquals("BHHHHHHHHHHHHHHHHHHB\n" +
-                        "V            1    KV\n" +
-                        "V BHB   BHB   4    V\n" +
-                        "V              3   V\n" +
-                        "V   BHB P BHB   2  V\n" +
-                        "V                P V\n" +
-                        "V     BHB P BHB   PV\n" +
-                        "V                  V\n" +
-                        "V       BHB P BHB  V\n" +
-                        "V  L               V\n" +
-                        "VC        BHB P BHHB\n" +
-                        "BHHHHHHHHHB BHHHB   ",
-                this.model.getMap());
-    }
-
-    @Test
-    public void TestOrderPerformMAP7() throws Exception {
-        this.controller.orderPerform(ControllerOrder.MAP7);
-        assertEquals(7, this.controller.getLevel());
-        assertEquals("BHHHHHHHHHHHHHHHHHHB\n" +
-                        "V                  V\n" +
-                        "V    L   BB   C    V\n" +
-                        "BHB  B   VV   B  BHB\n" +
-                        "  BB V BHBBHB V BB  \n" +
-                        "   B V BHBBHB V B   \n" +
-                        "  BB V   VV   V BB  \n" +
-                        " BBPPVP PVVP PVPPBB \n" +
-                        "BB   B   VV   B   BB\n" +
-                        "V2   K   BB       4V\n" +
-                        "V3                1V\n" +
-                        "BHHHHHHHHHHHHHHHHHHB",
-                this.model.getMap());
-    }
-
-    @Test
-    public void TestOrderPerformMAP8() throws Exception {
-        this.controller.orderPerform(ControllerOrder.MAP8);
-        assertEquals(8, this.controller.getLevel());
-        assertEquals(" BHHB            \n" +
-                        " BB2BHHB   BHHB  \n" +
-                        "  V    BB  V4 V  \n" +
-                        " BB BHBKVB VB V  \n" +
-                        "BB      V  VB VB \n" +
-                        "BC   BB BHHB  BHB\n" +
-                        " BB   V  LB     B\n" +
-                        "  BB  BHHB  BB  B\n" +
-                        "   B3       BHHHB\n" +
-                        "   BHHBBP PBV    \n" +
-                        "      BHBBBHB    ",
-                this.model.getMap());
-    }
-
-    @Test
-    public void TestOrderPerformMAP9() throws Exception {
-        this.controller.orderPerform(ControllerOrder.MAP9);
-        assertEquals(9, this.controller.getLevel());
-        assertEquals("BHHBHHHBHHHHHBHHBHHB\n" +
-                        "V  B         V  B LV\n" +
-                        "BHB          B     V\n" +
-                        "V  BHHHHHHHBB      V\n" +
-                        "V          B     BVB\n" +
-                        "V  B     C         V\n" +
-                        "BHB    B      B    V\n" +
-                        "V2   B  BHB BHBBBHHB\n" +
-                        "V  V  B     3  B   V\n" +
-                        "V  V1 V  K V   V   V\n" +
-                        "V  V  V4   V   V   V\n" +
-                        "BHHBHHBHHHHBHHHBHHHB",
-                this.model.getMap());
-    }*/
+ 
 
     @Test
     public void TestOrderPerformMENU() throws Exception {
@@ -223,35 +150,6 @@ public class ControllerTest {
                         "BHHHHHHHHHHHHHHHHHHB",
                 this.model.getMap());
     }
-
-   /* @Test
-    public void TestOrderPerformWS() throws Exception {
-        this.controller.orderPerform(ControllerOrder.WORKSHOP);
-        assertEquals(0, this.controller.getLevel());
-        assertEquals("BHHHHHHHHHHHHHHHHHHB\n" +
-                        "V                  V\n" +
-                        "V                  V\n" +
-                        "V                  V\n" +
-                        "O                  V\n" +
-                        "V        L         V\n" +
-                        "V                  V\n" +
-                        "V                  V\n" +
-                        "V                  V\n" +
-                        "V                  V\n" +
-                        "V                  V\n" +
-                        "BHHHHHHHHHHHHHHHHHHB",
-                this.model.getMap());
-    }
-
-    @Test
-    public void TestOrderPerformTEST() throws Exception {
-        this.controller.orderPerform(ControllerOrder.TEST);
-        assertEquals(0, this.controller.getLevel());
-        assertEquals("BVHPL\n" +
-                        "1234 \n" +
-                        "CO   ",
-                this.model.getMap());
-    }*/
 
     @Test
     public void TestParser() throws Exception {
@@ -285,56 +183,4 @@ public class ControllerTest {
             }
         }
     }
-
-   /* @Test
-    public void TestComputeNextPosUp() throws Exception {
-        this.controller.orderPerform(ControllerOrder.WORKSHOP);
-        Point nextPos = this.controller.computeNextPos(
-                MobileOrder.Up,
-                new Point(5, 5)
-        );
-        assertEquals(
-                new Point(4, 5),
-                nextPos
-        );
-    }
-
-    @Test
-    public void TestComputeNextPosLeft() throws Exception {
-        this.controller.orderPerform(ControllerOrder.WORKSHOP);
-        Point nextPos = this.controller.computeNextPos(
-                MobileOrder.Left,
-                new Point(5, 5)
-        );
-        assertEquals(
-                new Point(5, 4),
-                nextPos
-        );
-    }
-
-    @Test
-    public void TestComputeNextPosDown() throws Exception {
-        this.controller.orderPerform(ControllerOrder.WORKSHOP);
-        Point nextPos = this.controller.computeNextPos(
-                MobileOrder.Down,
-                new Point(5, 5)
-        );
-        assertEquals(
-                new Point(6, 5),
-                nextPos
-        );
-    }
-
-    @Test
-    public void TestComputeNextPosRight() throws Exception {
-        this.controller.orderPerform(ControllerOrder.WORKSHOP);
-        Point nextPos = this.controller.computeNextPos(
-                MobileOrder.Right,
-                new Point(5, 5)
-        );
-        assertEquals(
-                new Point(5, 6),
-                nextPos
-        );
-    }*/
 }
